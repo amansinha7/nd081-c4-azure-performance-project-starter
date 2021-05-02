@@ -21,7 +21,7 @@ from opencensus.trace.samplers import ProbabilitySampler
 from opencensus.trace.tracer import Tracer
 from opencensus.ext.flask.flask_middleware import FlaskMiddleware
 
-INSIGHTS_CONN_STR = 'InstrumentationKey=374ac2dd-88c7-42de-9cd0-04204f4666e3;IngestionEndpoint=https://westus2-2.in.applicationinsights.azure.com/'
+INSIGHTS_CONN_STR = 'InstrumentationKey=5e061cbc-95c7-4127-bf92-1e5738e91ce4'
 
 # Logging
 logger = logging.getLogger(__name__)
@@ -130,6 +130,6 @@ def index():
 
 if __name__ == "__main__":
     # comment line below when deploying to VMSS
-    app.run() # local
+    #app.run() # local
     # uncomment the line below before deployment to VMSS
-    #app.run(host='0.0.0.0', threaded=True, debug=True) # remote
+    app.run(host='0.0.0.0', threaded=True, debug=True) # remote
